@@ -1,6 +1,6 @@
-/* 'WEEX JS RUNTIME 0.21.5, Build 2017-07-27 19:28. */
+/* 'WEEX JS RUNTIME 0.21.6, Build 2017-07-27 19:28. */
 
-;(this.getJSFMVersion = function(){return "0.21.5"});
+;(this.getJSFMVersion = function(){return "0.21.6"});
 var global = this, process = { env: {} };var setTimeout = global.setTimeout;
 
 (function (global, factory) {
@@ -336,7 +336,7 @@ $export$1.P = 8;   // proto
 $export$1.B = 16;  // bind
 $export$1.W = 32;  // wrap
 $export$1.U = 64;  // safe
-$export$1.R = 128; // real proto method for `library` 
+$export$1.R = 128; // real proto method for `library`
 var _export = $export$1;
 
 var toString$1 = {}.toString;
