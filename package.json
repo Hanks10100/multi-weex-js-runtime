@@ -8,7 +8,8 @@
   },
   "author": "Hanks <zhanghan.me@gmail.com>",
   "license": "MIT",
-  "dependencies": {
-    "weex-js-runtime": "^0.21.9"
+  "devDependencies": {
+    "semver": "^5.4.1",
+    "weex-js-runtime": "0.21.7"
   }
 }
