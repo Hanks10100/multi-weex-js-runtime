@@ -10,46 +10,28 @@ function exec (command) {
     console.log(' =>', task)
     res = child_process.execSync(task)
   })
-  // console.log(' =>', green('done'), '\n')
   return res.toString()
 }
 
-const formerVersion = pkg.devDependencies['weex-js-runtime']
 let targetVersion = process.argv[2]
 let isLatest = false
 
-if (semver.valid(targetVersion)) {
-
-} else {
+if (!semver.valid(targetVersion)) {
   targetVersion = exec(`npm view weex-js-runtime version`).trim()
   isLatest = true
 }
 
-console.log(formerVersion, targetVersion)
-
+const formerVersion = pkg.devDependencies['weex-js-runtime']
 if (formerVersion === targetVersion) {
-  // TODO: validate
-  console.log('same')
+  console.log(` => weex-js-runtime@${targetVersion} is already installed.`)
   process.exit()
 }
-
-// [ '0.17.0-alpha4',
-//   '0.19.1',
-//   '0.19.2',
-//   '0.19.16',
-//   '0.20.5',
-//   '0.20.6',
-//   '0.20.9',
-//   '0.21.7',
-//   '0.21.8',
-//   '0.21.9' ]
 
 exec([
   `npm install weex-js-runtime@${targetVersion} -E`
 ])
 
 const filePath = `v${semver.major(targetVersion)}.${semver.minor(targetVersion)}`
-
 if (!fs.existsSync(filePath)) {
   fs.mkdirSync(filePath)
 }
