@@ -1,6 +1,6 @@
 {
-  "name": "multi-weex-js-runtime",
-  "version": "1.0.0",
+  "name": "weex-js-runtime-packages",
+  "version": "0.21.9",
   "description": "",
   "main": "index.js",
   "scripts": {
