@@ -7,5 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Hanks <zhanghan.me@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "weex-js-runtime": "^0.21.9"
+  }
 }
